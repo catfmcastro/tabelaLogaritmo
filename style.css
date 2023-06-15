@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+header{
+    background-color: lightblue;
+}
+
+.titulo{
+    font-size: 50px;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    padding: 20px;
+}
+
+header p{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center
+}
+
+/* Section */
+
+.formulario{
+    background-color: lightblue;
+    margin: 250px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario form input{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.formulario form:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 50px black;
+}
+
+/* Footer */
+
+footer{
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
