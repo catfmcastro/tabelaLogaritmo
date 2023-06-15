@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
+    <script src="java.js"></script>
     <title>Tabela de Logaritmo</title>
 </head>
 
@@ -16,7 +18,7 @@
 
     <header>
 
-        <h3 class="titulo">TABELA DE LOGARITMO</h3>
+        <h3 class="titulo"><strong>TABELA DE LOGARITMO</strong></h3>
         <p class="desc">Insira um valor abaixo para calcular o seu logarítmo natural</p>
 
     </header>
@@ -24,18 +26,35 @@
     <section>
 
         <div class="formulario">
+            
             <form>
-                <input type="text" placeholder="Insira um Valor">
-            </form>""
+
+                <input type="text" placeholder="Insira um Valor" id="inserir">
+
+            </form>
+
+            <div class="butao" onclick="CalcularLn()">
+            
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                
+            </div>
+
         </div>
 
-        <!-- add saída da resposta -->
+
+        <div id="resposta">
+
+            <!-- add saída da resposta -->
+            
+
+        </div>
 
     </section>
 
     <footer>
-        <p >Nome dos Integrantes:<br> Arthur Santos <br> Catarina F. M. Castro <br>Davi Oliveira Sad<br>Matheus Fagundes
-        </p>
+
+        <p><stron>Nome dos Integrantes:</stron> <br> <span id="ele" onclick="Oba ()">Arthur Santos</span> <br> <span>Catarina F. M. Castro</span> <br> <span>Davi Oliveira Sad</span> <br> <span>Matheus Fagundes</span></p>
+
     </footer>
 
 </body>

@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Pangolin', cursive;
 }
 
 /* Header */
@@ -29,7 +29,6 @@ header p{
 /* Section */
 
 .formulario{
-    background-color: lightblue;
     margin: 250px auto;
     border-radius: 10px;
     display: flex;
@@ -41,11 +40,28 @@ header p{
     height: 40px;
     border-radius: 5px;
     padding: 10px;
+    font-size: 30px;
 }
 
-.formulario form:hover{
+.formulario .butao{
+    background-color: lightblue;
+    border-radius: 10px;
+    width: 100px;
+    margin: 0px 20px;
+}
+
+.formulario .butao i{
+    margin: 30px;
+}
+
+.formulario .butao:hover{
     transform: scale(1.05);
-    box-shadow: 10px 10px 50px black;
+    box-shadow: 10px 40px 80px black;
+}
+
+.formulario form input:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 40px 80px black;
 }
 
 /* Footer */
@@ -54,4 +70,12 @@ footer{
     background-color: lightblue;
     text-align: center;
     padding: 20px;
+}
+
+footer p {
+    font-size: 25px;
+}
+
+footer p span {
+    font-size: 20px;
 }
