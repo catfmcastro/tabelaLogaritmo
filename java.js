@@ -2,6 +2,9 @@ function Oba () {
     alert('ele é cara do momento')
 }
 
+
+// Inicio do cálculo do Fagundes para o Ln
+
 function CalcularLn() {
 
     var valor = parseFloat(document.getElementById("inserir").value);
@@ -40,7 +43,7 @@ function ln(x)
     return soma;
 }
 
-
+// Final do Cálculo do Fafa
 
 
 
