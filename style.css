@@ -29,7 +29,9 @@ header p{
 /* Section */
 
 .formulario{
-    margin: 250px auto;
+    margin: 0px auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -62,6 +64,22 @@ header p{
 .formulario form input:hover{
     transform: scale(1.05);
     box-shadow: 10px 40px 80px black;
+}
+
+.valores2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#resposta{
+    text-align: center;
+    font-size: 20px;
+    margin: 50px auto;   
+}
+
+#resposta h2{
+    margin-bottom: 15px;
 }
 
 /* Footer */

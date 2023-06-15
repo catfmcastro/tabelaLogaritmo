@@ -6,8 +6,18 @@ function CalcularLn() {
 
     var valor = parseFloat(document.getElementById("inserir").value);
     var resultado = ln(valor);
-
-    document.getElementById('resposta').innerHTML = resultado;
+    
+    let str = `
+    <div id="resposta">
+    
+    <h2>Valor de Ln (<span>${valor}</span>)</h2>
+    
+    <h4><p>Valor: ${resultado}</p></h4>
+    
+    </div>`;
+    
+    
+    document.getElementById('resposta').innerHTML = str;
 
 }
 
