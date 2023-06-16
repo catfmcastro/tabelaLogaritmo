@@ -97,3 +97,43 @@ footer p {
 footer p span {
     font-size: 20px;
 }
+
+/* Media Querry */
+
+@media (max-width: 650px) {
+    
+    .formulario form input{
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+    .formulario .butao{
+        background-color: lightblue;
+        border-radius: 10px;
+        width: 80px;
+        margin: 0px 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    
+    .formulario form input{
+        width: 220px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+    .formulario .butao{
+        background-color: lightblue;
+        border-radius: 10px;
+        width: 80px;
+    }
+
+}
+
