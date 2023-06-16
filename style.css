@@ -36,7 +36,6 @@ header p{
     margin: 0px auto;
     margin-top: 150px;
     margin-bottom: 100px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
 }
@@ -45,7 +44,7 @@ header p{
     width: 400px;
     height: 40px;
     border-radius: 30px;
-    padding: 10px;
+    padding: 15px;
     font-size: 30px;
     margin: 10px;
 }
@@ -54,9 +53,7 @@ header p{
     background-color: lightblue;
     border-radius: 30px;
     width: 100px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: auto 10px;
 }
 
 .formulario .butao i{
@@ -102,6 +99,34 @@ footer p {
     font-size: 25px;
 }
 
-footer p span {
-    font-size: 20px;
+
+
+/* Media Querry */
+
+@media (max-width: 600px) {
+    .formulario{
+        margin: 0px auto;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        display: block;
+        justify-content: center;
+    }
+
+    .formulario .butao{
+        background-color: lightblue;
+        border-radius: 30px;
+        width: 100px;
+        margin: auto auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .formulario form input{
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 30px;
+        margin: 20px;
+    }
 }

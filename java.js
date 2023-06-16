@@ -1,5 +1,5 @@
 function Oba () {
-    alert('ele é cara do momento')
+    alert('ele é o cara do momento');
 }
 
 
