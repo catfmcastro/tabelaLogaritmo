@@ -33,7 +33,7 @@ header p{
 /* Section */
 
 .formulario{
-    margin: 0px auto;
+    margin: auto;
     margin-top: 150px;
     margin-bottom: 100px;
     display: flex;
@@ -87,6 +87,13 @@ header p{
     margin-bottom: 15px;
 }
 
+table, th, td{
+    border: 1px solid rgba(13, 25, 51, 0.5);
+    font-size: 40px;
+    width: 1000px;
+}
+
+
 /* Footer */
 
 footer{
@@ -103,6 +110,15 @@ footer p {
 
 /* Media Querry */
 
+@media (max-width: 1000px) {
+
+    table, th, td{
+        border: 1px solid rgba(13, 25, 51, 0.5);
+        font-size: 30px;
+        width: 400px;
+    }
+}
+
 @media (max-width: 600px) {
     .formulario{
         margin: 0px auto;
@@ -118,11 +134,13 @@ footer p {
         width: 100px;
         margin: auto auto;
     }
+    
 }
 
 @media (max-width: 450px) {
+    
     .formulario form input{
-        width: 200px;
+        width: 340px;
         height: 40px;
         border-radius: 30px;
         padding: 15px;
