@@ -1,13 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Pangolin', cursive;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: rgb(23, 67, 80);
 }
 
 /* Header */
 
 header{
-    background-color: lightblue;
+    background-color: rgb(144, 213, 236);
 }
 
 .titulo{
@@ -40,16 +44,19 @@ header p{
 .formulario form input{
     width: 400px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 10px;
     font-size: 30px;
+    margin: 10px;
 }
 
 .formulario .butao{
     background-color: lightblue;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 100px;
-    margin: 0px 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .formulario .butao i{
@@ -58,12 +65,13 @@ header p{
 
 .formulario .butao:hover{
     transform: scale(1.05);
-    box-shadow: 10px 40px 80px black;
+    box-shadow: 10px 20px 20px rgba(13, 25, 51, 0.5);
 }
 
 .formulario form input:hover{
     transform: scale(1.05);
-    box-shadow: 10px 40px 80px black;
+    box-shadow: 20px 20px 20px rgba(13, 25, 51, 0.5);
+    
 }
 
 .valores2{
@@ -97,43 +105,3 @@ footer p {
 footer p span {
     font-size: 20px;
 }
-
-/* Media Querry */
-
-@media (max-width: 650px) {
-    
-    .formulario form input{
-        width: 300px;
-        height: 40px;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 30px;
-    }
-    
-    .formulario .butao{
-        background-color: lightblue;
-        border-radius: 10px;
-        width: 80px;
-        margin: 0px 20px;
-    }
-
-}
-
-@media (max-width: 450px) {
-    
-    .formulario form input{
-        width: 220px;
-        height: 40px;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 30px;
-    }
-    
-    .formulario .butao{
-        background-color: lightblue;
-        border-radius: 10px;
-        width: 80px;
-    }
-
-}
-
