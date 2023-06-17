@@ -6,9 +6,12 @@
 
 body{
     background-color: rgb(23, 67, 80);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header */
+/* ?------------------------- HEADER ------------------------- */
 
 header{
     background-color: rgb(144, 213, 236);
@@ -30,45 +33,35 @@ header p{
     text-align: center
 }
 
-/* Section */
+/* ?------------------------- CALCULADORA ------------------------- */
 
 .formulario{
-    margin: auto;
-    margin-top: 150px;
-    margin-bottom: 100px;
+    display: block;
+    margin: 150px auto;
+    width: 40%;
+}
+
+#ln{
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
-}
-
-.formulario form input{
-    width: 400px;
-    height: 40px;
-    border-radius: 30px;
-    padding: 15px;
-    font-size: 30px;
-    margin: 10px;
-}
-
-.formulario .butao{
+    margin-bottom: 30px;
     background-color: lightblue;
-    border-radius: 30px;
-    width: 100px;
-    margin: auto 10px;
 }
 
-.formulario .butao i{
-    margin: 30px;
+#log{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    background-color: lightblue;
 }
 
-.formulario .butao:hover{
-    transform: scale(1.05);
-    box-shadow: 10px 20px 20px rgba(13, 25, 51, 0.5);
-}
-
-.formulario form input:hover{
-    transform: scale(1.05);
-    box-shadow: 20px 20px 20px rgba(13, 25, 51, 0.5);
-    
+#log2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .valores2{
@@ -94,9 +87,10 @@ table, th, td{
 }
 
 
-/* Footer */
+/* ?------------------------- FOOTER ------------------------- */
 
 footer{
+    margin-top: auto;
     background-color: lightblue;
     text-align: center;
     padding: 20px;
@@ -108,43 +102,5 @@ footer p {
 
 
 
-/* Media Querry */
+/* ?------------------------- MEDIA QUERY ------------------------- */
 
-@media (max-width: 1000px) {
-
-    table, th, td{
-        border: 1px solid rgba(13, 25, 51, 0.5);
-        font-size: 30px;
-        width: 400px;
-    }
-}
-
-@media (max-width: 600px) {
-    .formulario{
-        margin: 0px auto;
-        margin-top: 150px;
-        margin-bottom: 100px;
-        display: block;
-        justify-content: center;
-    }
-
-    .formulario .butao{
-        background-color: lightblue;
-        border-radius: 30px;
-        width: 100px;
-        margin: auto auto;
-    }
-    
-}
-
-@media (max-width: 450px) {
-    
-    .formulario form input{
-        width: 340px;
-        height: 40px;
-        border-radius: 30px;
-        padding: 15px;
-        font-size: 30px;
-        margin: 20px;
-    }
-}

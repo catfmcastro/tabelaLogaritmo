@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <script src="js.js"></script>
+    <script src="java.js"></script>
     <title>Tabela de Logaritmo</title>
 </head>
 
@@ -18,64 +18,58 @@
     <header>
 
         <h3 class="titulo">TABELA DE LOGARITMO</h3>
-        <p class="desc">Insira um valor abaixo para calcular o seu logarítmo natural</p>
+        <p class="desc">Insira um valor abaixo para calcular o seu logaritmo natural</p>
 
     </header>
 
     <section>
 
+        <!-- *CALCULADORA -->
         <div class="formulario">
-            <h1>Calcula LN</h1>
-            <input type="number" id="entrada" placeholder="Digite um valor" />
-            <button onclick="calcularLn()">Calcular</button>
-            <br><h2>Calcula qualquer base</h2>
-            <input type="number" id="valor" placeholder="Logaritmando" />
-            <input type="number" id="base" placeholder="Base do Log" />
-            <button onclick="calcularLogX()">Calcular Log</button>
 
-            <script>
-                function calcularLn() {
-                    var valor = parseFloat(document.getElementById("entrada").value);
-                    var resultado = ln(valor);
-                    console.log(parseFloat(resultado));
-                }
+            <!-- *calculadora de ln -->
+            <div id="ln">
+
+                <h1 id="title-ln">Calcula LN</h1>
+
+                <div class="ln2">
+                    
+                    <input type="text" id="entrada" placeholder="Digite um valor" /> <!-- !!! NÃO MUDAR O ID -->
+                    <button onclick="calcularLn()" id="btn-calc-ln">Calcular</button>
+
+                </div>
+
+            </div>
             
-                function ln(x) {
-                    var termos = 100;
-                    var soma = 0;
-            
-                    for (var n = 1; n <= termos; n++) {
-                        var numerador = Math.pow(x - 1, n);
-                        var denominador = n * Math.pow(x, n);
-                        var termo = numerador / denominador;
-            
-                        soma += termo;
-                    }
-            
-                    return soma;
-                }
-            
-                function calcularLogX() {
-                    var log = parseFloat(document.getElementById("valor").value);
-                    var base = parseFloat(document.getElementById("base").value);
-                    var resultadoLog = logX(log, base);
-                    console.log(parseFloat(resultadoLog));
-                }
-            
-                function logX(log, base) {
-                    var numero = ln(log) / ln(base);
-                    return numero;
-                }
-            </script>
+            <!-- *calculadora com qualquer base -->
+            <div id="log">
+                
+                <h2 id="title-base">Calcula qualquer base</h2>
+
+                <div id="log2">
+
+                    <input type="text" id="valor" placeholder="Logaritmando" /> <!-- !!! NÃO MUDAR O ID -->
+                    <input type="text" id="base" placeholder="Base do Log" /> <!-- !!! NÃO MUDAR O ID -->
+                    <button onclick="calcularLogX()" id="btn-calc-base">Calcular Log</button>
+                    
+                </div>
+                
+            </div>
             
         </div>
 
-        <!-- add saída da resposta -->
+        <!-- todo: add saída da resposta -->
 
     </section>
 
+    <!-- *RODAPÉ -->
     <footer>
-        <p>Nome dos Integrantes:<br> Arthur Santos <br> Catarina F. M. Castro <br>Davi Oliveira Sad<br>Matheus Fagundes
+        <p id="title-nomes">Nome dos Integrantes:</p>
+        <p id="nomes">
+            <span onclick="Oba ()">Arthur Santos</span><br>
+            Catarina F. M. Castro<br>
+            Davi Oliveira Sad<br>
+            Matheus Fagundes
         </p>
     </footer>
 
