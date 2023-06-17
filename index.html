@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
-    <script src="java.js"></script>
+    <script src="js.js"></script>
     <title>Tabela de Logaritmo</title>
 </head>
 
@@ -18,103 +17,63 @@
 
     <header>
 
-        <h3 class="titulo"><strong>TABELA DE LOGARITMO</strong></h3>
-        <p class="desc">Insira um valor abaixo para calcular o seu logaritmo natural</p>
+        <h3 class="titulo">TABELA DE LOGARITMO</h3>
+        <p class="desc">Insira um valor abaixo para calcular o seu logarítmo natural</p>
 
     </header>
 
     <section>
 
         <div class="formulario">
-            <form>
-                <input type="text" placeholder="Insira um Valor" id="inserir1">
-                <input type="text" placeholder="Insira um Valor" id="inserir2">
-            </form>
+            <input type="number" id="entrada" placeholder="Digite um valor" />
+            <button onclick="calcularLn()">Calcular</button>
+            <input type="number" id="valor" placeholder="Valor do Log" />
+            <input type="number" id="base" placeholder="Base do Log" />
+            <button onclick="calcularLogX()">Calcular Log</button>
 
-            <div class="butao" onclick="CalcularLn()">
-                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
-            </div>
+            <script>
+                function calcularLn() {
+                    var valor = parseFloat(document.getElementById("entrada").value);
+                    var resultado = ln(valor);
+                    console.log(parseFloat(resultado));
+                }
+            
+                function ln(x) {
+                    var termos = 100;
+                    var soma = 0;
+            
+                    for (var n = 1; n <= termos; n++) {
+                        var numerador = Math.pow(x - 1, n);
+                        var denominador = n * Math.pow(x, n);
+                        var termo = numerador / denominador;
+            
+                        soma += termo;
+                    }
+            
+                    return soma;
+                }
+            
+                function calcularLogX() {
+                    var log = parseFloat(document.getElementById("valor").value);
+                    var base = parseFloat(document.getElementById("base").value);
+                    var resultadoLog = logX(log, base);
+                    console.log(parseFloat(resultadoLog));
+                }
+            
+                function logX(log, base) {
+                    var numero = ln(log) / ln(base);
+                    return numero;
+                }
+            </script>
+            
         </div>
 
-        <div class="valores2" id="valores2">
-
-            <div id="resposta">
-                
-                <!-- <table>
-
-                    <tr>
-
-                        <th><strong>Base 10</strong></th>
-                        <th><strong>0.01</strong></th>
-                        <th><strong>0.1</strong></th>
-                        <th><strong>0.2</strong></th>
-
-                    </tr>
-
-                    <tr>
-
-                        <td></td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td></td>
-                        <td>b</td>
-                        <td>b</td>
-                        <td>b</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td></td>
-                        <td>c</td>
-                        <td>c</td>
-                        <td>c</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td></td>
-                        <td>d</td>
-                        <td>d</td>
-                        <td>d</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <th><strong>Tempo</strong></th>
-                        <td>d</td>
-                        <td>d</td>
-                        <td>d</td>
-
-                    </tr>
-
-                </table> -->
-
-                <!-- Resposta no java.js -->
-            </div>
-
-        </div>
+        <!-- add saída da resposta -->
 
     </section>
 
     <footer>
-        <p id="integrantes">Integrantes:</p>
-        <p id="nomes"><br>
-            <span onclick="Oba ()">Arthur Santos</span>
-            <br>
-            Catarina F. M. Castro
-            <br>
-            Davi Oliveira Sad
-            <br>
-            Matheus Fagundes
+        <p>Nome dos Integrantes:<br> Arthur Santos <br> Catarina F. M. Castro <br>Davi Oliveira Sad<br>Matheus Fagundes
         </p>
     </footer>
 
