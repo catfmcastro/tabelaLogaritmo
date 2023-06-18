@@ -41,51 +41,100 @@ header p{
     width: 40%;
 }
 
-#ln{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 30px;
+#container-calc-ln{
+    text-align: center;
+    display: block;
     background-color: lightblue;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-#log{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    background-color: lightblue;
+#container-calc-ln:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 50px 10px rgb(49, 48, 48);
 }
 
-#log2{
+.ln2{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+.ln2 input{
+    height: 20px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.ln2 button{
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#container-calc-base{
+    text-align: center;
+    display: block;
+    background-color: lightblue;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#container-calc-base:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 50px 10px rgb(49, 48, 48);
+}
+
+#input-calc-base{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
     gap: 10px;
+    padding: 10px;
 }
 
-.valores2{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
+#input-calc-base input{
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#container-calc-base button{
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #resposta{
-    text-align: center;
-    font-size: 20px;
-    margin: 50px auto;   
-}
-
-#resposta h2{
-    margin-bottom: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 table, th, td{
-    border: 1px solid rgba(13, 25, 51, 0.5);
-    font-size: 40px;
-    width: 1000px;
+    border: 1px solid black;
+    padding: 5px;
 }
 
+.container-resp{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#desc-tabela{
+    margin: 15px;
+}
 
 /* ?------------------------- FOOTER ------------------------- */
 
@@ -100,7 +149,30 @@ footer p {
     font-size: 25px;
 }
 
+#title-nomes{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    padding: 20px; 
+    padding-bottom: 10px;  
+}
 
+#nomes{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+}
 
 /* ?------------------------- MEDIA QUERY ------------------------- */
 
+@media (max-width: 1000px){
+    .formulario{
+        display: block;
+        margin: 150px auto;
+        width: 80%;
+    }
+}

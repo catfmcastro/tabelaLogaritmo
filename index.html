@@ -18,7 +18,7 @@
     <header>
 
         <h3 class="titulo">TABELA DE LOGARITMO</h3>
-        <p class="desc">Insira um valor abaixo para calcular o seu logaritmo natural</p>
+        <p class="desc">Insira os valores pedidos para calcular sua tabela de logaritmos</p>
 
     </header>
 
@@ -28,9 +28,10 @@
         <div class="formulario">
 
             <!-- *calculadora de ln -->
-            <div id="ln">
+            <div id="container-calc-ln">
 
-                <h1 id="title-ln">Calcula LN</h1>
+                <h1 id="title-ln">Calcula Ln</h1>
+                <p id="desc-ln">Insira um valor abaixo para calcular o seu logaritmo natural</p>
 
                 <div class="ln2">
                     
@@ -39,26 +40,38 @@
 
                 </div>
 
+                <div class="container-resp" id="container-resp-ln">
+                    
+                    <!-- vem do js -->
+
+                </div>
+
             </div>
             
             <!-- *calculadora com qualquer base -->
-            <div id="log">
+            <div id="container-calc-base">
                 
-                <h2 id="title-base">Calcula qualquer base</h2>
+                <h2 id="title-base">Criação da Tabela</h2>
+                <p id="desc-base">Insira o limite inferior, superior e uma base.<br>Será gerada uma tabela com os valores dos logaritmos <br> nessa base e o tempo de execução do programa</p>
 
-                <div id="log2">
+                <div id="input-calc-base">
 
-                    <input type="text" id="valor" placeholder="Logaritmando" /> <!-- !!! NÃO MUDAR O ID -->
-                    <input type="text" id="base" placeholder="Base do Log" /> <!-- !!! NÃO MUDAR O ID -->
-                    <button onclick="calcularLogX()" id="btn-calc-base">Calcular Log</button>
+                    <input type="text" id="min" placeholder="Min" />
+                    <input type="text" id="max" placeholder="Max" /> <!-- !!! NÃO MUDAR O ID -->
+                    <input type="text" id="base" placeholder="Base" /> <!-- !!! NÃO MUDAR O ID -->
                     
                 </div>
                 
+                <button onclick="calcularLogX()" id="btn-calc-base">Calcular</button>
+                
+                <div id="container-resp-base"><!-- base inserida pelo user --></div>
+
+                <div class="container-resp" id="container-resp-log"><!-- saída de resposta --></div>
+                
             </div>
+
             
         </div>
-
-        <!-- todo: add saída da resposta -->
 
     </section>
 
