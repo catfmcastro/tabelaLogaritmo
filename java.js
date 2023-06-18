@@ -36,8 +36,8 @@ function calcularLogX()
 {
 
     // entrada de dados
-    var min = parseFloat(document.getElementById("min").value);
-    var max = parseFloat(document.getElementById("max").value);
+    var min = parseInt(document.getElementById("min").value);
+    var max = parseInt(document.getElementById("max").value);
     var base = parseFloat(document.getElementById("base").value);
     var x = min, y = min, z = min;
     var temp1,temp2,temp3;
@@ -88,26 +88,22 @@ function calcularLogX()
     </div>`
     
     document.getElementById('container-resp-log').innerHTML = str1;
-    
     let vaa1 = '';
     let va2 = '';
     let vaa3 = '';
-    
-    console.time('Tempo1');
     const startTime1 = performance.now(); 
-    while(x <= max)
+    
+    while(x.toFixed(2) <= max)
     {
-        temp1 = x
-        resultado1 = logX(temp1,lnB);
-        x+=0.01;
+        resultado1 = logX(x,lnB);
         vaa1 += `
         <tr>
-            <td>log(${temp1.toFixed(2)}) = ${resultado1.toFixed(5)}</td>
+            <td>log(${x.toFixed(2)}) = ${resultado1.toFixed(5)}</td>
         </tr>`
+        x+=0.01;
         // todo: salvar na variavel e imprime na tabela
+        
     }
-    console.timeEnd('Tempo1');
-
     const endTime1 = performance.now();
     const tempo1 = endTime1 - startTime1;
     
@@ -118,20 +114,20 @@ function calcularLogX()
 
     // todo: tempo de exec + imprime na tabela
     
-    console.time('Tempo2');
+
+   
     const startTime2 = performance.now(); 
-    while(y <= max)
+    while(y.toFixed(1) <= max)
     {
-        temp2 = y;
-        resultado2 = logX(temp2,lnB);
-        y+=0.1;
+        resultado2 = logX(y,lnB);
         va2 += `
         <tr>
-            <td>log(${temp2.toFixed(1)}) = ${resultado2.toFixed(5)}</td>
+            <td>log(${y.toFixed(1)}) = ${resultado2.toFixed(5)}</td>
         </tr>`
+        y += 0.1;
         // todo: salvar na variavel e imprime na tabela
     }
-    console.timeEnd('Tempo2');
+
     const endTime2 = performance.now();
     const tempo_2 = endTime2 - startTime2;
     
@@ -141,22 +137,21 @@ function calcularLogX()
     </tr>`;
     // todo: tempo de exec + imprime na tabela
 
-    console.time('Tempo3');
+  
     const startTime3 = performance.now(); 
 
-    while(z <= max)
+    while(z.toFixed(1) <= max)
     {
-        temp3 = z;
-        resultado3 = logX(temp3,lnB);
-        z+=0.2;
+        resultado3 = logX(z,lnB);
         vaa3 += `
         <tr>
-            <td>log(${temp3.toFixed(1)}) = ${resultado3.toFixed(5)}</td>
+            <td>log(${z.toFixed(1)}) = ${resultado3.toFixed(5)}</td>
         </tr>`
+        z+=0.2;
         // todo: salvar na variavel e imprime na tabela
     }
 
-    console.timeEnd('Tempo3');
+
     const endTime3 = performance.now();
     const tempo_3 = endTime3 - startTime3;
 
