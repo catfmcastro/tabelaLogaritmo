@@ -42,7 +42,7 @@ function calcularLogX()
     var x = min, y = min, z = min;
     var temp1,temp2,temp3;
     var resultado1 = 0, resultado2 = 0, resultado3 = 0;
-    
+    var lnB = lnBase(base);
     let basao = `<h3 id = "desc-tabela">Cálculos na base ${base}</h3>`;
 
     document.getElementById('container-resp-base').innerHTML = basao;
@@ -95,11 +95,10 @@ function calcularLogX()
     
     console.time('Tempo1');
     const startTime1 = performance.now(); 
-    
     while(x <= max)
     {
         temp1 = x
-        resultado1 = logX(temp1,base);
+        resultado1 = logX(temp1,lnB);
         x+=0.01;
         vaa1 += `
         <tr>
@@ -124,7 +123,7 @@ function calcularLogX()
     while(y <= max)
     {
         temp2 = y;
-        resultado2 = logX(temp2,base);
+        resultado2 = logX(temp2,lnB);
         y+=0.1;
         va2 += `
         <tr>
@@ -148,7 +147,7 @@ function calcularLogX()
     while(z <= max)
     {
         temp3 = z;
-        resultado3 = logX(temp3,base);
+        resultado3 = logX(temp3,lnB);
         z+=0.2;
         vaa3 += `
         <tr>
@@ -183,6 +182,12 @@ function calcularLogX()
 // ? CALCULA LOG EM QUALQUER BASE
 function logX(log, base) 
 {
-    var numero = ln(log) / ln(base);
+    var numero = ln(log) / base;
     return numero;
+}
+
+function lnBase (base)
+{
+    var lnB = ln(base);
+    return lnB;
 }
