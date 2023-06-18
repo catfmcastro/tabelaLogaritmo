@@ -36,8 +36,8 @@ function calcularLogX()
 {
 
     // entrada de dados
-    var min = parseInt(document.getElementById("min").value);
-    var max = parseInt(document.getElementById("max").value);
+    var min = parseFloat(document.getElementById("min").value);
+    var max = parseFloat(document.getElementById("max").value);
     var base = parseFloat(document.getElementById("base").value);
     var x = min, y = min, z = min;
     var temp1,temp2,temp3;
