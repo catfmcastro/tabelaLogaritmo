@@ -1,16 +1,14 @@
 function Oba () 
-{
-    
-    alert('ele é o cara do momento');
-    
+{    
+    alert("--------------------O CARA DO MOMENTO--------------------\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣥⣤⣾⠟⡛⠿⠿⣭⣻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⣽⡟⡏⢩⣦⡝⠋⢸⣶⠄⢲⡟⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣌⡳⣜⢿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢀⡛⢌⢿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠄⠙⠌⣸⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⡿⠉⠉⠉⠉⢿⣿⣿⣿⠏⠉⠉⠉⠉⠉⠆⠄⠁⠄⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⡗⠫⠿⠆⠄⠸⢿⣿⣿⠂⠒⠲⡿⠛⠛⠂⠄⠄⢠⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⡛⣧⡔⠢⠴⣃⣠⣼⣿⣧⡀⠘⢢⣀⠄⠄⠄⠄⠄⢈⠁⢿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣿⠄⠄⠄⣸⠆⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣼⢿⣿⣿⣿⣿⡀⠄⠘⡀⢠⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⡌⠿⣫⣿⣦⠬⢭⣥⣶⣬⣾⣿⢿⣿⡟⠄⢀⣿⣶⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣧⠘⣉⠛⢻⣛⣛⣛⣻⡶⠮⠙⠃⣉⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⡆⠸⣿⣶⢾⣿⣯⣤⣄⣀⣾⡟⠄⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿\n⠟⠿⠿⠿⠿⢿⣷⠄⣿⣿⣎⣹⢻⣿⣿⡿⡿⠁⠄⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿\n⠄⠄⠄⠄⠄⠄⠄⣠⠘⣿⣿⣿⣿⣿⣿⡟⠁⣀⣀⣀⠄⠘⠿⣿⣿⣿⣿⣿⣿⣿");
 }
 
-function calcularLn() 
+function calcularLn()
 {
     var valor = parseFloat(document.getElementById("entrada").value);
     var resultado = ln(valor);
 
-    let str = `<div class="respostas">
+    let str = `<div id="resps-block-one">
 
     <h3>Resposta: <span>${resultado.toFixed(5)}</span> </h3>
 
@@ -51,11 +49,11 @@ function calcularLogX()
 
     let str1 = `
     
-    <div>
+    <div id="format-tabela">
 
     <table>
         <tr>
-            <th>+ 0.01</th>
+            <th class="title-tabela">+ 0.01</th>
         </tr>
         <tbody id ="tabela">
         </tbody>
@@ -64,10 +62,10 @@ function calcularLogX()
     </table>
     </div>
 
-    <div>
+    <div id="format-tabela-2">
     <table>
         <tr>
-            <th>+ 0.1</th>
+            <th class="title-tabela">+ 0.1</th>
         </tr>
         <tbody id ="tabela_2">
         </tbody>
@@ -76,21 +74,20 @@ function calcularLogX()
     </table>
     </div>
 
-    <div>
+    <div id="format-tabela-3">
     <table>
         <tr>
-            <th>+ 0.2</th>
+            <th class="title-tabela">+ 0.2</th>
         </tr>
         <tbody id ="tabela_3">
         </tbody>
         <tbody id ="time_3">
         </tbody>
     </table>
+    </div>
     </div>`
     
     document.getElementById('container-resp-log').innerHTML = str1;
-    
-    // chamada da função de cálculo
     
     let vaa1 = '';
     let va2 = '';

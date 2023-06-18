@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(23, 67, 80);
+    background-color: #021C26;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,9 @@ body{
 /* ?------------------------- HEADER ------------------------- */
 
 header{
-    background-color: rgb(144, 213, 236);
+    background-color:#043142;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .titulo{
@@ -23,14 +25,18 @@ header{
     font-style: oblique;
     text-align: center;
     padding: 20px;
+    color: #3DF2E0;
 }
 
 header p{
     padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 40px;
     font-size: 20px;
     font-weight: bold;
     font-style: oblique;
-    text-align: center
+    text-align: center;
+    color: #0FB2F2;
 }
 
 /* ?------------------------- CALCULADORA ------------------------- */
@@ -41,21 +47,78 @@ header p{
     width: 40%;
 }
 
-#container-calc-ln{
+input{
+    height: 20px;
+    border-style: hidden;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #085A8C;
+}
+
+input::placeholder{
+    color: #0FB2F2;
+    font-weight: bold;
+}
+
+input:focus{
+    outline: none;
+    background-color: #0f75b4;
+}
+
+button{
+    border-style: hidden;
+    background-color: #3DF2E0;
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #043142;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px 5px black;
+}
+
+/* ?CALCULADORAS */
+
+#title-ln, #title-base{
+    color: #3DF2E0;
+    font-weight: bolder;
+    font-style: oblique;
+    font-size: 26px;
+}
+
+#desc-ln, #desc-base{
+    color: #0FB2F2;
+    font-size: 18px;
+    font-style: oblique;
+    margin-bottom: 30px;
+}
+
+#container-calc-ln, #container-calc-base{
     text-align: center;
     display: block;
-    background-color: lightblue;
+    background-color: #032940;
     margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
 }
 
-#container-calc-ln:hover{
-    transform: scale(1.05);
-    box-shadow: 10px 10px 50px 10px rgb(49, 48, 48);
+/* ?CALCULADORA DE LN */
+
+#resps-block-one{
+    background-color: #0FB2F2;
+    border-style: hidden;
+    border-radius: 10px;
+    color: #021C26;
+    padding: 15px;
 }
 
-.ln2{
+#input-calc-ln{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,40 +127,22 @@ header p{
     padding: 10px;
 }
 
-.ln2 input{
+#input-calc-ln input{
     height: 20px;
     width: 300px;
     border-radius: 10px;
     padding: 10px;
+    color: #3DF2E0;
 }
 
-.ln2 button{
-    height: 45px;
-    width: 100px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-#container-calc-base{
-    text-align: center;
-    display: block;
-    background-color: lightblue;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#container-calc-base:hover{
-    transform: scale(1.05);
-    box-shadow: 10px 10px 50px 10px rgb(49, 48, 48);
-}
+/* ?CRIAÇÃO DA TABELA */
 
 #input-calc-base{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px auto;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
 }
 
@@ -106,6 +151,7 @@ header p{
     width: 150px;
     border-radius: 10px;
     padding: 10px;
+    color: #3DF2E0;
 }
 
 #container-calc-base button{
@@ -122,8 +168,14 @@ header p{
 }
 
 table, th, td{
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid #021C26;
+    border-radius: 10px;
+    background-color: #0FB2F2;
+    padding: 10px;
+}
+
+.title-tabela{
+    border-style: hidden;
 }
 
 .container-resp{
@@ -134,19 +186,29 @@ table, th, td{
 
 #desc-tabela{
     margin: 15px;
+    color: #0FB2F2;
+}
+
+#format-tabela,#format-tabela-2,#format-tabela-3{
+    color: #021C26;
+    font-weight: bold;
+    border-style: hidden;
 }
 
 /* ?------------------------- FOOTER ------------------------- */
 
 footer{
     margin-top: auto;
-    background-color: lightblue;
+    background-color: #043142;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }
 
 footer p {
     font-size: 25px;
+    color: #0FB2F2;
 }
 
 #title-nomes{
@@ -167,6 +229,12 @@ footer p {
     padding-top: 10px;
 }
 
+h6{
+    color: #043142;
+    font-family: 'Pangolin', cursive;
+    font-size: 25px;
+    text-align: end;
+}
 /* ?------------------------- MEDIA QUERY ------------------------- */
 
 @media (max-width: 1000px){

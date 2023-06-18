@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <script src="java.js"></script>
     <title>Tabela de Logaritmo</title>
 </head>
@@ -33,18 +36,14 @@
                 <h1 id="title-ln">Calcula Ln</h1>
                 <p id="desc-ln">Insira um valor abaixo para calcular o seu logaritmo natural</p>
 
-                <div class="ln2">
+                <div id="input-calc-ln">
                     
-                    <input type="text" id="entrada" placeholder="Digite um valor" /> <!-- !!! NÃO MUDAR O ID -->
+                    <input type="text" id="entrada" placeholder="Digite um valor" /> 
                     <button onclick="calcularLn()" id="btn-calc-ln">Calcular</button>
 
                 </div>
 
-                <div class="container-resp" id="container-resp-ln">
-                    
-                    <!-- vem do js -->
-
-                </div>
+                <div class="container-resp" id="container-resp-ln"><!-- saída - vem do js --></div>
 
             </div>
             
@@ -52,13 +51,13 @@
             <div id="container-calc-base">
                 
                 <h2 id="title-base">Criação da Tabela</h2>
-                <p id="desc-base">Insira o limite inferior, superior e uma base.<br>Será gerada uma tabela com os valores dos logaritmos <br> nessa base e o tempo de execução do programa</p>
+                <p id="desc-base">Insira o limite inferior, superior e uma base.<br>Será gerada uma tabela com os valores dos logaritmos<br>nessa base e o tempo de execução do programa</p>
 
                 <div id="input-calc-base">
 
                     <input type="text" id="min" placeholder="Min" />
-                    <input type="text" id="max" placeholder="Max" /> <!-- !!! NÃO MUDAR O ID -->
-                    <input type="text" id="base" placeholder="Base" /> <!-- !!! NÃO MUDAR O ID -->
+                    <input type="text" id="max" placeholder="Max" /> 
+                    <input type="text" id="base" placeholder="Base" /> 
                     
                 </div>
                 
@@ -66,7 +65,7 @@
                 
                 <div id="container-resp-base"><!-- base inserida pelo user --></div>
 
-                <div class="container-resp" id="container-resp-log"><!-- saída de resposta --></div>
+                <div class="container-resp" id="container-resp-log"><!-- saída - vem do js --></div>
                 
             </div>
 
@@ -84,6 +83,7 @@
             Davi Oliveira Sad<br>
             Matheus Fagundes
         </p>
+        <h6>Fafa gosta de homem peludo e pelado que soa igual porco</h6>
     </footer>
 
 </body>
